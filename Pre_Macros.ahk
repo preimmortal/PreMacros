@@ -9,9 +9,11 @@ F8::
 	Clipboard = [%X%,%Y%]
 Return
 
-F7::preAutoSubmit()
 
-preAutoSubmit(Speed=10)
+
+F7::preAutoForge()
+
+preAutoForge(Speed=10)
 {
 	static Toggle
 	Toggle := !Toggle
@@ -21,14 +23,31 @@ preAutoSubmit(Speed=10)
 	Return
 	
 	SubmitClick:
-	MouseGetPos, X, Y
+	MouseMove, 544,323
 	Click
 	Click
-	Sleep 300
-	MouseMove, 966,648
+	Sleep 50
+	MouseMove, 604,323
 	Click
-	Sleep 200
-	MouseMove, %X%, %Y%
+	Click
+	Sleep 50
+	MouseMove, 664,323
+	Click
+	Click
+	Sleep 50
+	MouseMove, 720,323
+	Click
+	Click
+	Sleep 50
+	MouseMove, 1100,768
+	Click
+	Click
+	Sleep 50
+	MouseMove, 1100,768
+	Click
+	Click
+	Send, f
+	Sleep 1500
 	Return
 }
 
@@ -155,7 +174,87 @@ F10::
 	Send, {Tab}
 	MouseMove, AcceptX, AcceptY
 	Click
+	Sleep 500
+
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+	Click, WheelDown
+	Sleep, 300
+
+    ;Set Dive
+	MouseMove, 1126, 572
+	Click 2
+	Sleep 100
+	Send, {Shift}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
+
+    ;Set Mounts
+	MouseMove, 982, 607
+	Click 2
+	Sleep 100
+	Send, {Ctrl Down}
+    Send, {1}
+    Send, {Ctrl Up}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
+
+	MouseMove, 982, 622
+	Click 2
+	Sleep 100
+	Send, {Ctrl Down}
+    Send, {2}
+    Send, {Ctrl Up}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
+
+	MouseMove, 982, 639
+	Click 2
+	Sleep 100
+	Send, {Ctrl Down}
+    Send, {3}
+    Send, {Ctrl Up}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
 	
+	MouseMove, 982, 660
+	Click 2
+	Sleep 100
+	Send, {Ctrl Down}
+    Send, {4}
+    Send, {Ctrl Up}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
+
+	MouseMove, 982, 676
+	Click 2
+	Sleep 100
+	Send, {Ctrl Down}
+    Send, {5}
+    Send, {Ctrl Up}
+	MouseMove, AcceptX, AcceptY
+	Click
+	Sleep 500
+
 Return
 
 ; Primary AboutFace Master Function
